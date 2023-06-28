@@ -1,6 +1,15 @@
 function isPalindrome(word) {
-  // Write your algorithm here
+  let array = word.split('');
+  let backwards = array.reverse();
+  let reversed = backwards.join('');
+
+  if(reversed === word){
+  console.log(true);
+  }else {
+    console.log(false);
+  }
 }
+isPalindrome('mum');
 
 /* 
   Add your pseudocode here
@@ -11,15 +20,4 @@ function isPalindrome(word) {
 */
 
 // You can run `node index.js` to view these console logs
-if (require.main === module) {
-  // add your own custom tests in here
-  console.log("Expecting: true");
-  console.log("=>", isPalindrome("racecar"));
 
-  console.log("");
-
-  console.log("Expecting: false");
-  console.log("=>", isPalindrome("robot"));
-}
-
-module.exports = isPalindrome;
